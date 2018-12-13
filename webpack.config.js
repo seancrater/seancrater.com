@@ -23,6 +23,9 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new webpack.EnvironmentPlugin(['GIT_TOKEN'])
+    ],
     resolve: {
         extensions: ['*', '.js', '.jsx', '.mjs']
     },
