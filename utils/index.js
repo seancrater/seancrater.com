@@ -1,0 +1,1 @@
+export const getBaseUrl = req => req ? `${req.protocol}://${req.get('Host')}` : '';
