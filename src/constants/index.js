@@ -1,1 +1,1 @@
-export const GITHUB_ENDPOINT = 'https://api.github.com/graphql';
+export const GITHUB_ENDPOINT = '/rest/user';

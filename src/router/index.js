@@ -9,15 +9,7 @@ import { GITHUB_ENDPOINT } from '../constants';
 import { UserData } from '../components/UserData';
 
 const client = new ApolloClient({
-    uri: GITHUB_ENDPOINT,
-    request: operation => {
-        const token = process.env.GIT_TOKEN;
-        operation.setContext({
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        })
-    }
+    uri: GITHUB_ENDPOINT
 });
 
 const App = () => (

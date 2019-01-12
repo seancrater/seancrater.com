@@ -1,6 +1,10 @@
 {
     "plugins": ["emotion", "react"],
     "extends": ["eslint:recommended"],
+    "env": {
+      "browser": true,
+      "node": true
+    },
     "parserOptions": {
       "ecmaVersion": 2018,
       "sourceType": "module",
