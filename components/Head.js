@@ -2,14 +2,15 @@ import React from 'react';
 import NextHead from 'next/head';
 import { string } from 'prop-types';
 
-const defaultDescription = ''
-const defaultOGURL = ''
-const defaultOGImage = ''
+const defaultDescription = 'Sean Crater is a software engineer living in the greater Boston area.';
+const defaultTitle = 'Sean Crater | Software Engineer';
+const defaultOGURL = '';
+const defaultOGImage = '';
 
 const Head = props => (
   <NextHead>
     <meta charSet="UTF-8" />
-    <title>{props.title || ''}</title>
+    <title>{props.title || defaultTitle}</title>
     <meta
       name="description"
       content={props.description || defaultDescription}
@@ -20,7 +21,7 @@ const Head = props => (
     <link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882" />
     <link rel="icon" href="/static/favicon.ico" />
     <meta property="og:url" content={props.url || defaultOGURL} />
-    <meta property="og:title" content={props.title || ''} />
+    <meta property="og:title" content={props.title || defaultTitle} />
     <meta
       property="og:description"
       content={props.description || defaultDescription}

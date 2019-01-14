@@ -11,7 +11,7 @@ import { getBaseUrl } from '../utils';
 
 const Home = ({ user }) => (
   <div>
-    <Head title="Home" />
+    <Head ogImage={user.avatarUrl} />
     <Nav />
     <UserData user={user} />
   </div>
