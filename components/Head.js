@@ -2,6 +2,8 @@ import React from 'react';
 import NextHead from 'next/head';
 import { string } from 'prop-types';
 
+import GlobalStyles from '../styles/GlobalStyles';
+
 const defaultDescription = 'Sean Crater is a software engineer living in the greater Boston area.';
 const defaultTitle = 'Sean Crater | Software Engineer';
 const defaultOGURL = '';
@@ -32,6 +34,8 @@ const Head = props => (
     <meta property="og:image" content={props.ogImage || defaultOGImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+
+    <GlobalStyles />
   </NextHead>
 );
 

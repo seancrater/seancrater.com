@@ -2,11 +2,30 @@
 import { css, jsx } from '@emotion/core';
 import React, { Component } from 'react';
 
-import { background, primary } from '../styles/variables';
+import Text from './Text';
+import { background, primary, unit } from '../styles/variables';
 
 const styles = css`
   background-color: ${background};
   color: ${primary};
+
+  align-items: center;
+  display: flex;
+  padding: ${unit};
+
+  > div {
+    width: 50%;
+  
+    &:first-child {
+      padding-right: ${unit};
+    }
+  }
+
+  img {
+    border-radius: 50%;
+    height: auto;
+    max-width: 100%;
+  }
 `;
 
 const UserData = ({ user }) => {
@@ -15,9 +34,13 @@ const UserData = ({ user }) => {
 
     return (
       <div css={styles}>
-        <img alt={name} src={avatarUrl} />
-        <h1>{name}</h1>
-        <h2>{bio}</h2>
+        <div>
+          <img alt={name} src={avatarUrl} />
+        </div>
+        <div>
+          <Text type="h1">{name}</Text>
+          <h2>{bio}</h2>
+        </div>
       </div>
     );
   }

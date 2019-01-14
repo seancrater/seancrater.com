@@ -4,5 +4,15 @@ export const green = 'rgba(6, 214, 160, 1)';
 export const jet = 'rgba(52, 52, 52, 1)';
 export const silver = 'rgba(132, 140, 142, 1)';
 
+const colors = [
+    charcoal,
+    cream,
+    green,
+    jet,
+    silver
+];
+
 export const primary = green;
 export const background = jet;
+
+export const unit = '2rem';
