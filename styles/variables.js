@@ -4,7 +4,7 @@ export const green = 'rgba(6, 214, 160, 1)';
 export const jet = 'rgba(52, 52, 52, 1)';
 export const silver = 'rgba(132, 140, 142, 1)';
 
-const colors = [
+export const colors = [
     charcoal,
     cream,
     green,

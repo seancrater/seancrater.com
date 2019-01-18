@@ -17,10 +17,29 @@ app.prepare()
       const query = `
         query {
             user(login: "seancrater") {
-                login
-                name
-                bio
                 avatarUrl
+                bio
+                name
+                contributionsCollection {
+                  contributionCalendar {
+                    weeks {
+                      contributionDays {
+                        contributionCount
+                        date
+                      }
+                    }
+                  }
+                }
+                repositoriesContributedTo(first: 25, privacy: PUBLIC) {
+                  nodes {
+                    name
+                  }
+                }
+                starredRepositories(last: 25) {
+                  nodes {
+                    name
+                  }
+                }
             }
         }
       `;
