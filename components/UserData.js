@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
-import React, { Component } from 'react';
+import React from 'react';
 
 import Text from './Text';
 import { background, primary, unit } from '../styles/variables';
@@ -16,7 +16,7 @@ const styles = css`
   > div {
     width: 50%;
   
-    &:first-child {
+    &:first-of-type {
       padding-right: ${unit};
     }
   }
@@ -37,10 +37,10 @@ const UserData = ({ user }) => {
         <div>
           <img alt={name} src={avatarUrl} />
         </div>
-        <div>
+        <header>
           <Text type="h1">{name}</Text>
-          <h2>{bio}</h2>
-        </div>
+          <Text type="h2">{bio}</Text>
+        </header>
       </div>
     );
   }
